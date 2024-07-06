@@ -86,6 +86,7 @@ async function sendEmail(req, res) {
                 <p>Phone Number: ${appointment.phoneNumber}</p>
                 <p>Date: ${appointment.requestedDate.toISOString().split('T')[0]}</p>
                 <p>Time: ${newTime}</p>
+                <p>Package: ${appointment.appointmentType}</p>
             `
         }, (error, info) => {
             if (error) {

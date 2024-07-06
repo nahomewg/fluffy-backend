@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 // Define a schema for appointment requests
 const AppointmentRequestSchema = new mongoose.Schema({
     name: { type: String, required: true },
-    email: { type: String, required: true, unique: true },
+    email: { type: String, required: true },
     phoneNumber: { type: String, required: true },
     requestedDate: { type: Date, required: true },
     requestedTime: { type: String, required: true }, // Assuming time is stored as string
