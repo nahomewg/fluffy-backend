@@ -76,8 +76,8 @@ async function sendEmail(req, res) {
         const appointment = req.appointment;
         const newTime = convertTime(appointment.requestedTime);
         nodemailerMailgun.sendMail({
-            from: "postmaster@sandboxf20a82a3acc14aa8aae8147242ed06c3.mailgun.org",
-            to: "nwgiorgis@gmail.com",
+            from: process.env.MAILGUN_EMAIL,
+            to: process.env.CLIENT_EMAIL,
             subject: "FLUFFY AUTO DETAILING Appointment Request",
             html: `
                 <h3>Hello Fluffy, you have a new appointment request:</h3>
